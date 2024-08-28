@@ -1,33 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+body {
     margin: 0;
     padding: 0;
 }
-.container{
+
+/* Variables */
+:root {
+    --grid-container-max-width: 1200px; /* Max width for the container */
+    --grid-container-padding: 15px; /* Padding on left/right */
+}
+
+/* Reset CSS */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* Grid Container */
+.grid-container {
+    max-width: var(--grid-container-max-width);
+    padding-left: calc(var(--grid-container-padding) / 2);
+    padding-right: calc(var(--grid-container-padding) / 2);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 40em) {
+    .grid-container {
+        padding-right: 0.9375rem;
+        padding-left: 0.9375rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .grid-container {
+        max-width: 1400px;
+    }
+}
+
+.container {
     height: 100vh;
     width: 100%;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     position: relative;
 }
-.acceuil{
+.acceuil {
     background: #190422;
 }
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: auto;
     width: 100%;
 }
-.acceuil .header .logo{
+.acceuil .header .logo {
     font-size: 64px;
     font-weight: 600;
     margin-left: 50px;
 }
-.acceuil .header .logo svg{
+.acceuil .header .logo svg {
     height: 64px;
 }
-.navbar{
+.navbar {
     display: flex;
     justify-content: flex-end;
     font-size: 20px;
@@ -36,7 +72,7 @@ body{
 /* .navbar .connect{
     padding: 30px 50px 30px 10px;
 } */
-.link_container{
+.link_container {
     padding: 40px 50px;
     height: 100%;
     width: 100%;
@@ -44,12 +80,12 @@ body{
     flex-direction: row;
     align-items: center;
 }
-.link_container .links{
+.link_container .links {
     margin: 0 50px;
     text-decoration: none;
     color: #fff;
 }
-.acceuil .header .navbar .connect button{
+.acceuil .header .navbar .connect button {
     font-size: 20px;
     border: none;
     background-color: #d9bbff;
@@ -58,23 +94,23 @@ body{
     margin: 0;
     cursor: pointer;
 }
-.acceuil .content{
+.acceuil .content {
     display: grid;
-    grid-template-columns: repeat(12 , 1fr);
+    grid-template-columns: repeat(12, 1fr);
 }
-.acceuil .content .box{
+.acceuil .content .box {
     grid-column-end: span 6;
 }
-.acceuil .content .box .box1 .gras{
+.acceuil .content .box .box1 .gras {
     color: #fff;
     font-size: 80px;
     font-weight: 600;
 }
-.acceuil .content .box .box1 .infos{
+.acceuil .content .box .box1 .infos {
     color: #fff;
     font-size: 20px;
 }
-.acceuil .content .box .box1 .btn button{
+.acceuil .content .box .box1 .btn button {
     background-color: #d9bbff;
     font-size: 22px;
     display: flex;
@@ -85,25 +121,26 @@ body{
     border: none;
     cursor: pointer;
 }
-.acceuil .content .box .box1{
+.acceuil .content .box .box1 {
     display: flex;
     flex-direction: column;
     row-gap: 30px;
     padding: 50px;
 }
-.acceuil .content .box .image1{
+.acceuil .content .box .image1 {
     display: flex;
     justify-content: flex-end;
     padding: 50px;
 }
-#sidebar_active{
+#sidebar_active {
     display: none;
 }
-.open_sidebar_btn , .close_sidebar_btn{
-    padding:0 20px;
+.open_sidebar_btn,
+.close_sidebar_btn {
+    padding: 0 20px;
     display: none;
 }
-.details{
+.details {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -111,7 +148,7 @@ body{
     top: 85%;
     right: 28%; */
 }
-.details .box2{
+.details .box2 {
     margin: 0;
     display: flex;
     justify-content: space-evenly;
@@ -123,46 +160,46 @@ body{
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
     padding: 20px 100px;
 }
-.details .box2 .element1{
+.details .box2 .element1 {
     display: flex;
     flex-direction: column;
 }
-.details .box2 .element2{
+.details .box2 .element2 {
     display: flex;
     flex-direction: column;
 }
-.details .box2 .element3{
+.details .box2 .element3 {
     display: flex;
     flex-direction: column;
 }
 @media screen and (max-width: 1025px) {
-    .acceuil .content .box .box1 .gras{
+    .acceuil .content .box .box1 .gras {
         font-size: 50px;
     }
-    .acceuil .content .box .box1 .infos{
+    .acceuil .content .box .box1 .infos {
         font-size: 14px;
     }
-    .acceuil .content .box .box1 .btn button{
+    .acceuil .content .box .box1 .btn button {
         font-size: 16px;
     }
-    .acceuil .content .box .image1 img{
+    .acceuil .content .box .image1 img {
         height: 345px;
     }
 }
-@media screen and (max-width : 769px) {
-    .acceuil .header .logo svg{
+@media screen and (max-width: 769px) {
+    .acceuil .header .logo svg {
         height: 40px;
     }
-    .acceuil .content .box .box1 .gras{
+    .acceuil .content .box .box1 .gras {
         font-size: 37px;
     }
-    .acceuil .content .box .box1 .infos{
+    .acceuil .content .box .box1 .infos {
         font-size: 14px;
     }
-    .acceuil .content .box .box1 .btn button{
+    .acceuil .content .box .box1 .btn button {
         font-size: 16px;
     }
-    .acceuil .content .box .image1 img{
+    .acceuil .content .box .image1 img {
         height: 340px;
     }
 }
