@@ -12,13 +12,6 @@ body{
 .acceuil{
     background: #190422;
 }
-.header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
-    width: 100%;
-}
 .acceuil .header .logo{
     font-size: 64px;
     font-weight: 600;
@@ -27,22 +20,20 @@ body{
 .acceuil .header .logo svg{
     height: 64px;
 }
+.header{
+    display: flex;
+    justify-content: space-between;
+}
 .navbar{
     display: flex;
     justify-content: flex-end;
     font-size: 20px;
-    align-items: center;
 }
-/* .navbar .connect{
+.navbar .connect{
     padding: 30px 50px 30px 10px;
-} */
+}
 .link_container{
     padding: 40px 50px;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 .link_container .links{
     margin: 0 50px;
@@ -152,6 +143,15 @@ body{
 @media screen and (max-width : 769px) {
     .acceuil .header .logo svg{
         height: 40px;
+    }
+    .navbar svg{
+        color: #fff;
+    }
+    #sidebar_active{
+        display: none;
+    }
+    .open_sidebar_btn{
+        display: none;
     }
     .acceuil .content .box .box1 .gras{
         font-size: 37px;
