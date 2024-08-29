@@ -206,6 +206,109 @@ body {
     font-size: 20px;
 }
 
+
+.objectif{
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    /* padding: 180px 0; */
+    margin: 150px 0;
+    column-gap: 10px;
+    row-gap: 40px;
+}
+
+.objectif .box {
+    grid-column-end: span 6 ;
+    gap: 20px;
+    position: relative;
+}
+
+.objectif .box .box1 .gras{
+    font-size: 48px;
+    font-weight: 600;
+}
+.objectif .box .box1 .infos{
+    font-size: 20px;
+}
+.objectif .box .box1 .btn button {
+    background-color: #d9bbff;
+    font-size: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+}
+
+.objectif .box .box1 {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    height: 100%;
+    justify-content: center;
+}
+
+.objectif .box .image2 img {
+    
+    display: block;
+    margin: 0;
+    /* padding: 50px 80px; */
+}
+.objectif .box .circle{
+    height: 15px;
+    width: 15px;
+    border-radius: 100%;
+    border: 4px solid #BC8AFC;
+    color: #E98FD0;
+    
+    animation: bounceIn 2s ease-in-out infinite 0.5s;
+}
+
+.objectif .box .circle:nth-child(1){
+    left: -12%;
+    top: 5%;
+    position: absolute;
+}
+.objectif .box .circle:nth-child(2){
+    left: 27%;
+    top: -15%;
+    position: absolute;
+    animation-delay: 1s;
+}
+.objectif .box .circle:nth-child(3){
+    right: 25%;
+    top: -5%;
+    position: absolute;
+    animation-delay: 1.5s;
+}
+.objectif .box .circle:nth-child(4){
+    right: 28%;
+    top: 50%;
+    position: absolute;
+    animation-delay: 2s;
+}
+.objectif .box .circle:nth-child(5){
+    right: 35%;
+    top: 92%;
+    position: absolute;
+    animation-delay: 2.5s;
+}
+.objectif .box .circle:nth-child(6){
+    left: -9%;
+    top: 70%;
+    position: absolute;
+    animation-delay: 3s;
+}
+.objectif .box .circle:nth-child(7){
+    left: -5%;
+    top: 108%;
+    position: absolute;
+    animation-delay: 3.5s;
+}
 @media screen and (max-width: 769px) {
 
     .acceuil .content .box .image1 {
@@ -242,28 +345,77 @@ body {
         height: 320px;
     }
     .objectif .box .box1 .gras{
-        font-size: 40px;
+        font-size: 30px;
         font-weight: 600;
     }
     .objectif .box .image2 {
 
         text-align: center;
+        /* padding: 50px 10px; */
         
+    }.objectif{
+        column-gap: 10px;
+        row-gap: 100px;
+        /* margin: 100px 0;
+        padding: 0; */
     }
     .objectif .box .image2 img{
-        height: 100px;
-        width: 100px;
+      width: 75%;
+      margin: 0 auto;
     }
     .objectif .box .box1 .infos {
-        font-size: 20px;
+        font-size: 15px;
     }
 
     .objectif .box .box1 .btn button {
         font-size: 16px;
+    } 
+    .objectif .box{
+        grid-column-end: span 12 ;
     }
-
-    .objectif .box .image1 img {
-        height: 320px;
+    
+    .objectif .box .circle{
+        height: 10px;
+        width: 10px;
+        border-radius: 100%;
+        border: 4px solid #BC8AFC;
+        color: #E98FD0;
+    }
+    
+    .objectif .box .circle:nth-child(1){
+        left: 1%;
+        top: 5%;
+        position: absolute;
+    }
+    .objectif .box .circle:nth-child(2){
+        left: 47%;
+        top: -12%;
+        position: absolute;
+    }
+    .objectif .box .circle:nth-child(3){
+        right: 4%;
+        top: -5%;
+        position: absolute;
+    }
+    .objectif .box .circle:nth-child(4){
+        right: 5%;
+        top: 55%;
+        position: absolute;
+    }
+    .objectif .box .circle:nth-child(5){
+        right: 9%;
+        top: 92%;
+        position: absolute;
+    }
+    .objectif .box .circle:nth-child(6){
+        left: 2%;
+        top: 73%;
+        position: absolute;
+    }
+    .objectif .box .circle:nth-child(7){
+        left: 8%;
+        top: 110%;
+        position: absolute;
     }
 }
 
@@ -274,71 +426,24 @@ body {
     .acceuil .content{
         column-gap: 10px;
     }
-    .objectif .box{
-        grid-column-end: span 12 ;
+    .objectif .box .circle{
+        height: 5px;
+        width: 5px;
+        border-radius: 100%;
+        border: 3px solid #BC8AFC;
+        color: #E98FD0;
     }
-    .objectif{
-        column-gap: 10px;
-    }
+    
 }
-.objectif{
-    display: grid;
-    grid-template-columns: repeat(12 , 1fr);
-}
-
-.objectif .box {
-    grid-column-end: span 6;
-    padding-top: 60px;
-}
-
-.objectif .box .gras{
-    font-size: 48px;
-    font-weight: 600;
-}
-.objectif .box .infos{
-    font-size: 20px;
-}
-.objectif .box .box1 .btn button {
-    background-color: #d9bbff;
-    font-size: 22px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 5px;
-    border-radius: 8px;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    font-family: "Poppins", sans-serif;
-    font-weight: 500;
-}
-
-.objectif .box .box1 {
-    display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-    height: 100%;
-    justify-content: center;
-}
-
-.objectif .box .image2 {
-    display: flex;
-    justify-content: flex-start;
-    margin: 0;
-    padding: 0;
-}
-
-.objectif .box .image2 img {
-    width: auto;
-    height: auto;
-    display: block;
-    margin: 0;
-    padding: 0;
-}
-.objectif .box  .circle{
-    height: 20px;
-    width: 20px;
-    border-radius: 100%;
-    border: 4px solid #BC8AFC;
-    color: #E98FD0;
+@keyframes bounceIn {
+	0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+	50% {
+    transform: translateY(-30px);
+  }
+	100% {
+    transform: translateY(0);
+  }
 }
