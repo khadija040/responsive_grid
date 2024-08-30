@@ -1,0 +1,45 @@
+#mobile-app{
+    background: #190422;
+}
+.app{
+    display: grid;
+    grid-template-columns: repeat(12 , 1fr);
+    flex-wrap: wrap;
+}
+.app .download{
+    grid-column-end: span 8;
+    padding-top: 50px;
+}
+.app .screen-image{
+    grid-column-end: span 4;
+    margin-top: -190px;
+}
+.app .download .text{
+    color: #fff;
+    font-size: 48px;
+    font-weight: 600;
+}
+.app .download .images{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+.app .screen-image img{
+    width: 100%;
+}
+@media screen and (max-width: 769px) {
+    .app .download{
+        grid-column-end: span 12;
+        text-align: center;
+    }
+    .app .screen-image{
+        grid-column-end: span 12;
+        text-align: center;
+        margin-top: 0;
+    }
+    .app .download .images{
+        column-gap: 10px;
+    }
+}
